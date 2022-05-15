@@ -1,0 +1,4 @@
+setuptools~=58.1.0
+yagmail~=0.15.277
+requests~=2.27.1
+beautifulsoup4~=4.10.0
