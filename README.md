@@ -10,3 +10,27 @@ Is there anything you can do about it ? Yes alot of things, but let's start off 
 2) After creating the account, open the gmail app and go into settings,
 3) click on the ["Security"](https://myaccount.google.com/data-and-privacy) tab, scroll till you find "Less secure app access"
 It's usually off by default, click on the toggle and enable it on.
+
+
+### Prerequisites
+
+* BeautifulSoup
+* yagmail
+
+### Installing
+
+```
+git clone https://github.com/tolu-joel/The-Humor-News.git
+```
+
+## Built With
+
+* Python
+
+## Authors
+
+* [**Tolu Joel**](https://twitter.com/tolu_joel_)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
