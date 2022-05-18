@@ -24,7 +24,8 @@ git clone https://github.com/tolu-joel/The-Humor-News.git
 ```
 
 ## Built With
-
+* HTML
+* CSS
 * Python
 
 ## Authors
