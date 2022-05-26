@@ -23,6 +23,11 @@ It's usually off by default, click on the toggle and enable it on.
 git clone https://github.com/tolu-joel/The-Humor-News.git
 ```
 
+Install the requirements
+```
+pip install -r requirements.txt
+```
+
 ## Built With
 * HTML
 * CSS
