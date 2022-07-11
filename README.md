@@ -1,8 +1,8 @@
-# The Humor News 🙈
-### If not humor, then what ?
+# The Humore  🙈
+### If not humour, then what ?
 
-The news is mostly filled with negative and sad stories and most of us don't like thais and wonder if the world can get any better.
-Is there anything you can do about it ? Yes alot of things, but let's start off with this python script that sends you funny, weird, strange and positive news, but never negative news.
+The news is mostly filled with negative and sad stories and most of us don't like this and wonder if the world can get any better.
+Is there anything you can do about it? Yes, a lot of things, but let's start off with this python script that sends you funny, weird, strange and positive news, but never negative news.
 
 ## Getting Started
 
@@ -15,7 +15,6 @@ It's usually off by default, click on the toggle and enable it on.
 ### Prerequisites
 
 * BeautifulSoup
-* yagmail
 
 ### Installing
 
@@ -27,6 +26,10 @@ Install the requirements
 ```
 pip install -r requirements.txt
 ```
+or activate the virtual environment
+```
+source venv/bin/activate
+```
 
 ## Built With
 * HTML
@@ -35,7 +38,7 @@ pip install -r requirements.txt
 
 ## Authors
 
-* [**Tolu Joel**](https://twitter.com/tolu_joel_)
+* [**Tolu P. Joel**](https://twitter.com/toluisjoel)
 
 ## License
 

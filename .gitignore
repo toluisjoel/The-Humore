@@ -1,4 +1,6 @@
 # Default ignored files
-todo.txt
-redis-stable
-redis-stable.tar.gz
+.env
+recipients.csv
+venv/
+.idea/
+sites.json

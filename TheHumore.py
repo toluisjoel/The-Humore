@@ -1,7 +1,12 @@
-import yagmail
+import smtplib
 import requests
+from environs import Env
 from bs4 import BeautifulSoup
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
+env = Env()
+env.read_env()
 all_posts = [[], []]  # [0] = post_title, [1] = post_link
 
 
@@ -10,7 +15,7 @@ def get_content(web_page, tag, tag_class):
     soup = BeautifulSoup(web_page.text, 'lxml')
     source = soup.find_all(tag, class_=tag_class)
 
-    def parse(post_source):          
+    def parse(post_source):
         for post in post_source:
             post_title = post.text
             if "https" not in (post_link := post.a['href']):
@@ -43,5 +48,26 @@ html_template = f'''
     <div style="margin: auto;width: 60%;border: 2px solid #4CAF50;padding: 50px;border-radius: 20px;margin-top: 100px;">{html_template}</div>
 '''
 
-email = yagmail.SMTP('programmerlaptop@gmail.com', input('Email Password: '))
-email.send('toluisjoel@gmail.com', 'TheHumorNews', html_template)
+
+def send_mail():
+    sender_mail = env.str('sender_mail')
+    recipient_mail = env.str('recipient_mail')
+    mail_password = env.str('mail_password')
+
+    mail = MIMEMultipart('alternative')
+    mail['Subject'] = 'Second Test'
+    mail['From'] = sender_mail
+    mail['To'] = recipient_mail
+    mail_content = MIMEText(html_template, 'html', 'utf-8')
+    mail.attach(mail_content)  # Email body or Content
+
+    # Code from here will send the message
+    with smtplib.SMTP_SSL('smtp.zoho.com', 465) as smtp:
+        smtp.starttls()
+        smtp.login(sender_mail, mail_password)
+        smtp.sendmail(sender_mail, recipient_mail, mail.as_string())
+        print('DONE')
+
+
+if __name__ == '__main__':
+    send_mail()
